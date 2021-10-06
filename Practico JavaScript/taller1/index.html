@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/a4a6364b6a.js" crossorigin="anonymous"></script>
+
+    <title>Figuras</title>
+
+    <style>
+        * {
+            margin: 0px !important;
+            padding: 0px !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid w-100 ">
+
+        <header class="bg-dark w-100 p-3 shadow">
+            <h1 class="text-center text-white">Calculadora Figuras Geométricas</h1>
+        </header>
+        <section class="m-5">
+
+            <div class="row d-flex justify-content-center">
+
+                <!-- Cuadrado -->
+                <div class="col-md-4 rounded shadow p-3 d-flex justify-content-center mx-1 my-3">
+                    <div class="row d-flex ">
+                        <h2 class="col-md-12 text-center"><i class="text-success far fa-square"></i> Cuadrado</h2>
+
+                        <form class="col-md-12 p-3 ">
+
+                            <input class="form-control my-2 p-2" type="text" name="" id="InputCuadrado"
+                                placeholder="ingrese lado" required pattern="[0-9]">
+
+                            <div class="row d-flex justify-content-center ">
+                                <button onclick="calcularPerimetroCuadrado()" type="button"
+                                    class=" p-2 btn btn-success col-md-4 m-1">
+                                    Perimetro
+                                </button>
+                                <button onclick="calcularAreaCuadrado()" type="button"
+                                    class="p-2 btn btn-primary col-md-4 m-1">
+                                    Área
+                                </button>
+                                <button type="reset" class="p-2 btn btn-danger col-md-2 m-1">
+                                    <i class="far fa-trash-alt"></i>
+                                </button>
+
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
+
+                <!-- circulo -->
+                <div class="col-md-4 rounded shadow p-3 d-flex justify-content-center mx-1 my-3">
+                    <div class="row d-flex ">
+                        <h2 class="col-md-12 text-center"><i class="text-danger far fa-circle"></i> Circulo</h2>
+
+                        <form class="col-md-12 p-3 ">
+
+
+
+                            <input class="form-control my-2 p-2" type="text" name="" id="InputCirculo"
+                                placeholder="ingrese Radio" required pattern="[0-9]">
+
+                            <div class="row d-flex justify-content-center ">
+                                <button onclick="calcularPerimetroCirculo()" type="button"
+                                    class=" p-2 btn btn-success col-md-4 m-1">
+                                    Perimetro
+                                </button>
+                                <button onclick="calcularAreaCirculo()" type="button"
+                                    class="p-2 btn btn-primary col-md-4 m-1">
+                                    Área
+                                </button>
+
+                                <button type="reset" class="p-2 btn btn-danger col-md-2 m-1">
+                                    <i class="far fa-trash-alt"></i>
+                                </button>
+
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
+
+                <!-- triangulo -->
+                <div class="col-md-8 rounded shadow  p-3 d-flex justify-content-center ">
+                    <div class="row d-flex ">
+                        <h2 class="col-md-12 text-center"><i class="text-primary fas fa-caret-up -x2"></i> Triangulo
+                        </h2>
+
+                        <form class="col-md-12 p-3">
+
+                            <div class="row">
+                                <div class="col-md-6 m-1">
+                                    <!-- Lados -->
+                                    <label for="" class="text-black">Para Perimetro</label>
+
+                                    <input class="form-control my-2 p-2" type="text" name="" id="lado1"
+                                        placeholder="ingrese lado 1" required pattern="[0-9]">
+
+                                    <input class="form-control my-2 p-2" type="text" name="" id="lado2"
+                                        placeholder="ingrese lado 2" required pattern="[0-9]">
+
+                                    <!-- Base -->
+                                    <input class="form-control my-2 p-2" type="text" name="" id="base"
+                                        placeholder="ingrese base" required pattern="[0-9]">
+                                </div>
+
+                                <div class="col-md-5 m-1">
+                                    <!-- Area -->
+                                    <label for="" class="text-black">Para area</label>
+                                    <!-- Lados -->
+                                    <input class="form-control my-2 p-2" type="text" name="" id="base2"
+                                        placeholder="ingrese base" required pattern="[0-9]">
+
+                                    <input class="form-control my-2 p-2" type="text" name="" id="altura"
+                                        placeholder="ingrese altura" required pattern="[0-9]">
+                                </div>
+                            </div>
+
+                            <!-- Botones -->
+                            <div class="row d-flex justify-content-center">
+                                <button onclick="calcularPerimetroTriangulo()" type="button"
+                                    class="p-2 btn btn-success col-md-4 m-1">
+                                    Perimetro
+                                </button>
+                                <button onclick="calcularAreaTriangulo()" type="button"
+                                    class="p-2 btn btn-primary col-md-4 m-1">
+                                    Área
+                                </button>
+                                <button type="reset" class="p-2 btn btn-danger col-md-2 m-1">
+                                    <i class="far fa-trash-alt"></i>
+                                </button>
+
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+        </section>
+    </div>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+    <script src="./calculadoraFiguras.js"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
