@@ -32,7 +32,7 @@
             <div class="row d-flex justify-content-center">
 
                 <!-- Cuadrado -->
-                <div class="col-md-4 rounded shadow p-3 d-flex justify-content-center mx-1 my-3">
+                <div class="col-md-4 rounded bg-light shadow p-3 d-flex justify-content-center mx-1 my-3">
                     <div class="row d-flex ">
                         <h2 class="col-md-12 text-center"><i class="text-success far fa-square"></i> Cuadrado</h2>
 
@@ -62,7 +62,7 @@
                 </div>
 
                 <!-- circulo -->
-                <div class="col-md-4 rounded shadow p-3 d-flex justify-content-center mx-1 my-3">
+                <div class="col-md-4 rounded bg-light shadow p-3 d-flex justify-content-center mx-1 my-3">
                     <div class="row d-flex ">
                         <h2 class="col-md-12 text-center"><i class="text-danger far fa-circle"></i> Circulo</h2>
 
@@ -95,7 +95,7 @@
                 </div>
 
                 <!-- triangulo -->
-                <div class="col-md-8 rounded shadow  p-3 d-flex justify-content-center ">
+                <div class="col-md-4 rounded bg-light shadow  p-3 d-flex justify-content-center mx-1 my-3">
                     <div class="row d-flex ">
                         <h2 class="col-md-12 text-center"><i class="text-primary fas fa-caret-up -x2"></i> Triangulo
                         </h2>
@@ -139,6 +139,50 @@
                                 <button onclick="calcularAreaTriangulo()" type="button"
                                     class="p-2 btn btn-primary col-md-4 m-1">
                                     Área
+                                </button>
+                                <button type="reset" class="p-2 btn btn-danger col-md-2 m-1">
+                                    <i class="far fa-trash-alt"></i>
+                                </button>
+
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
+
+                <!-- triangulo isosceles-->
+                <div class="col-md-4 rounded bg-light shadow  p-3 d-flex justify-content-center mx-1 my-3">
+                    <div class="row d-flex ">
+                        <h2 class="col-md-12 text-center"><i class="text-warning fas fa-caret-up -x2"></i> Triangulo
+                            Isosceles
+                        </h2>
+
+                        <form class="col-md-12 p-3">
+
+                            <div class="row">
+                                <div class="col-12">
+                                    <p class="text-muted text-center">Recuerda los dos lados deben ser iguales</p>
+                                </div>
+                                <div class="col-md-12 m-1">
+                                    <!-- longitudes -->
+                                    <input class="form-control my-2 p-2" type="text" name="" id="ladoIso1"
+                                        placeholder="ingrese lado 1" required pattern="[0-9]">
+
+                                    <input class="form-control my-2 p-2" type="text" name="" id="ladoIso2"
+                                        placeholder="ingrese lado 2" required pattern="[0-9]">
+
+                                    <!-- Base -->
+                                    <input class="form-control my-2 p-2" type="text" name="" id="baseIso"
+                                        placeholder="ingrese base" required pattern="[0-9]">
+                                </div>
+                            </div>
+
+                            <!-- Botones -->
+                            <div class="row d-flex justify-content-center">
+                                <button onclick="calcularAlturaIsosceles()" type="button"
+                                    class="p-2 btn btn-success col-md-4 m-1">
+                                    Altura
                                 </button>
                                 <button type="reset" class="p-2 btn btn-danger col-md-2 m-1">
                                     <i class="far fa-trash-alt"></i>

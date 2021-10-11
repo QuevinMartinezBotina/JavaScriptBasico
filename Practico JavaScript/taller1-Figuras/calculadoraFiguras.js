@@ -35,6 +35,29 @@ function areaTriangulo(base, altura) {
 
 console.groupEnd();
 
+/* Triangulo Isosceles */
+console.group("TrianguloIsosceles");
+
+function alturaIsosceles(lado1, lado2, base) {
+    if (lado1 == lado2 && lado1 != base) {
+        /* alert('isoceles') */
+        return Math.sqrt(lado1 ** 2 - base ** 2 / 4)
+
+    } else {
+        /* alert('no lo se') */
+        alert("No es Isosceles, lados distintos, lado1: " + lado1 + " lado 2: " + lado2);
+    }
+}
+
+function suma(lado1, lado2, base) {
+
+    return lado1 + lado2 + base
+
+}
+
+console.groupEnd();
+
+
 /* Código del Circulo */
 console.group("Circulo");
 
@@ -97,6 +120,24 @@ function calcularAreaTriangulo() {
     const area = areaTriangulo(base, altura);
     alert("Area " + area + " cm2");
 }
+
+/* Triangulo Isosceles */
+
+function calcularAlturaIsosceles() {
+
+    const inputLadoUno = document.getElementById("ladoIso1");
+    const inputLadoDos = document.getElementById("ladoIso2");
+    const inpuBase = document.getElementById("baseIso");
+
+    const ladoUno = parseInt(inputLadoUno.value);
+    const ladoDos = parseInt(inputLadoDos.value);
+    const base = parseInt(inpuBase.value);
+
+    const altura = alturaIsosceles(ladoUno, ladoDos, base);
+
+    alert(altura);
+}
+
 
 /* Circulo */
 function calcularPerimetroCirculo() {
