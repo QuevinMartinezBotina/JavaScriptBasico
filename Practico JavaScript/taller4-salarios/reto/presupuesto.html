@@ -39,12 +39,69 @@
         </head>
 
         <main class="col-md-12 col-11"></main>
-        <div class="row col-md-10 col-11 d-flex justify-content-center shadow-lg  rounded border border-muted">
-            <div class="col-md-10 col-11 d-flex justify-content-center p-3 text-center">
-                <form>
-                    <div class="row m-2">
-                        <input name="" id="inputSueldodoMes" placeholder="Sueldo para el mes"
-                            class="p-2 col-md-3 col-12 form-control text-center" type="number" required />
+        <div class="row col-md-10 col-11 d-flex justify-content-center  ">
+
+            <!-- Digitación de datos -->
+            <div
+                class="col-md-10 col-11 d-flex justify-content-center p-3 text-center rounded border border-muted m-1 mt-3 shadow">
+                <form class="">
+                    <div class="row m-2 d-flex justify-content-center ">
+                        <!-- Presupuesto mes -->
+                        <div class="col-md-11 m-1">
+                            <input name="" id="inputSueldodoMes" placeholder="Presupuesto para mes"
+                                class="p-2  form-control text-center text-muted" type="number" required />
+                        </div>
+
+                        <!-- % Para transporte -->
+                        <div class="col-md-3  m-1">
+                            <select class="p-2 text-muted form-control" name="" id="selectTransporte">
+                                <option class="text-muted" value="0">% para transporte</option>
+                                <option class="text-muted" value="10">Destinar el 10%</option>
+                                <option class="text-muted" value="20">Destinar el 20%</option>
+                                <option class="text-muted" value="30">Destinar el 30%</option>
+                                <option class="text-muted" value="40">Destinar el 40%</option>
+                                <option class="text-muted" value="50">Destinar el 50%</option>
+                                <option class="text-muted" value="60">Destinar el 60%</option>
+                                <option class="text-muted" value="70">Destinar el 70%</option>
+                                <option class="text-muted" value="80">Destinar el 80%</option>
+                                <option class="text-muted" value="90">Destinar el 90%</option>
+                                <option class="text-muted" value="100">Destinar el 100%</option>
+                            </select>
+                        </div>
+
+                        <!-- % Para comida -->
+                        <div class="col-md-4  m-1">
+                            <select class="p-2 text-muted form-control" name="" id="selectComida">
+                                <option class="text-muted" value="0">% para comida</option>
+                                <option class="text-muted" value="10">Destinar el 10%</option>
+                                <option class="text-muted" value="20">Destinar el 20%</option>
+                                <option class="text-muted" value="30">Destinar el 30%</option>
+                                <option class="text-muted" value="40">Destinar el 40%</option>
+                                <option class="text-muted" value="50">Destinar el 50%</option>
+                                <option class="text-muted" value="60">Destinar el 60%</option>
+                                <option class="text-muted" value="70">Destinar el 70%</option>
+                                <option class="text-muted" value="80">Destinar el 80%</option>
+                                <option class="text-muted" value="90">Destinar el 90%</option>
+                                <option class="text-muted" value="100">Destinar el 100%</option>
+                            </select>
+                        </div>
+
+                        <!-- % Para servicios -->
+                        <div class="col-md-4  m-1">
+                            <select class="p-2 text-muted form-control" name="" id="selectServicios">
+                                <option class="text-muted" value="0">% para servicios</option>
+                                <option class="text-muted" value="10">Destinar el 10%</option>
+                                <option class="text-muted" value="20">Destinar el 20%</option>
+                                <option class="text-muted" value="30">Destinar el 30%</option>
+                                <option class="text-muted" value="40">Destinar el 40%</option>
+                                <option class="text-muted" value="50">Destinar el 50%</option>
+                                <option class="text-muted" value="60">Destinar el 60%</option>
+                                <option class="text-muted" value="70">Destinar el 70%</option>
+                                <option class="text-muted" value="80">Destinar el 80%</option>
+                                <option class="text-muted" value="90">Destinar el 90%</option>
+                                <option class="text-muted" value="100">Destinar el 100%</option>
+                            </select>
+                        </div>
 
 
                         <div class="col-md-12 d-flex justify-content-center m-2">
@@ -55,8 +112,9 @@
                 </form>
             </div>
 
+            <!-- Visualización de resultados -->
             <div
-                class="col-md-10 col-11 d-flex justify-content-center  text-center border border-muted p-3  m-3 rounded">
+                class="col-md-10 col-11 d-flex justify-content-center  text-center border border-muted p-3  m-3 rounded shadow">
                 <div class="row m-2">
                     <div class="col-md-12 my-2 ">
                         <p class="h4 text-muted">Tu balance del mes</p>
@@ -64,7 +122,7 @@
 
                     <!-- Transporte -->
                     <div class="col-md-6 col-12">
-                        <div class="row border border-muted rounded shadow m-1">
+                        <div class="row border border-muted rounded  m-1">
                             <div class="col-md-12 col-12 p-2 text-muted border ">
                                 <p class="h5">Transporte</p>
                             </div>
@@ -79,7 +137,7 @@
 
                     <!-- Comidad -->
                     <div class="col-md-6 col-12">
-                        <div class="row border border-muted rounded shadow m-1">
+                        <div class="row border border-muted rounded  m-1">
                             <div class="col-md-12 col-12 p-2 text-muted border ">
                                 <p class="h5">Comida</p>
                             </div>
@@ -94,7 +152,7 @@
 
                     <!-- Servicios -->
                     <div class="col-md-6 col-5">
-                        <div class="row border border-muted rounded shadow m-1">
+                        <div class="row border border-muted rounded  m-1">
                             <div class="col-md-12 col-12 p-2 text-muted border ">
                                 <p class="h5">Servicios</p>
                             </div>
@@ -109,7 +167,7 @@
 
                     <!-- Entretenimiento -->
                     <div class="col-md-6 col-5">
-                        <div class="row border border-muted rounded shadow m-1">
+                        <div class="row border border-muted rounded  m-1">
                             <div class="col-md-12 col-12 p-2 text-muted border ">
                                 <p class="h5">Entretenimiento</p>
                             </div>
