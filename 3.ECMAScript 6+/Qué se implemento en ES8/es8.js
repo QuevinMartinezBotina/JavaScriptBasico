@@ -25,11 +25,11 @@ console.log(string.padEnd(12, ' -----'));
 console.log('food'.padEnd(12, '  -----'));
 
 
-//*PROMESAS
+//*Async Await
 
 const helloWord = () => {
     return new Promise((resolve, reject) => {
-        (true)
+        (!true)
             ? setTimeout(() => resolve('hello word, success promise'), 1000)
             : reject(new Error('Test Erroc'));
     });
