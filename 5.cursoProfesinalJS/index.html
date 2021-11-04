@@ -2,8 +2,10 @@
 
 <head>
   <title>PlatziMediaPlayer.js</title>
+  <link rel="icon" href="https://i.ibb.co/t3d5YrG/logo.png" type="image/png">
   <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" />
   <link rel="stylesheet" href="./assets/css/index.css" />
+  <script src="https://kit.fontawesome.com/a4a6364b6a.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -13,15 +15,15 @@
   </header>
 
   <main class="container">
-    <video class="movie">
+    <video id="play" class="movie">
       <source src="./assets/media/hades.mp4" />
     </video>
 
-    <button class="play-pausa">Play/Pause</button>
+    <button id="play2" class="play-pausa"><i class="far fa-play-circle fa-lg"></i></button>
+    <button id="mute" class="mute"><i class="fas fa-volume-mute"></i></button>
   </main>
-
-  <script src="./assets/js/index.js"></script>
-
+  <!-- <script src="./assets/js/index.js"></script> -->
+  <script type="module" src="./assets/js/player.js"></script>
 </body>
 
 </html>

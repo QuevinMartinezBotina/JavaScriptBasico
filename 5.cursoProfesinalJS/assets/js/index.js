@@ -1,14 +1,22 @@
-const video = document.querySelector("video");
-const button = document.querySelector("button");
-
 function MediaPlayer(config) {
-    this.media = config.el;
+  this.media = config.el;
+  this.plugins = config.plugins || [];
+
+  this._initPlugins();
 }
 
-MediaPlayer.prototype.controls = function () {
-    this.media.paused ? this.media.play() : this.media.pause();
+MediaPlayer.prototype._initPlugins = function () {
+  this.plugins.forEach((plugin) => {
+    plugin.run(this);
+  });
 };
 
-const player = new MediaPlayer({ el: video });
+MediaPlayer.prototype.controls = function () {
+  this.media.paused ? this.media.play() : this.media.pause();
+};
 
-button.onclick = () => player.controls();
+MediaPlayer.prototype.mute = function () {
+  this.media.muted ? (this.media.muted = false) : (this.media.muted = true);
+};
+
+export default MediaPlayer;
