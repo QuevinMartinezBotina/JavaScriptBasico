@@ -14,13 +14,17 @@ function caminar(metros, direction) {
 const person = {
     name: "Quevin",
     lastName: "Martinez",
+    person2: {
+        name: "Juan",
+        lastName: "Pinto",
+    },
 }
 
 //?object.call(object, param1, param2, ...)
-saludar.call(person);
+saludar.call(person.person2);
 
 //?Y así sería con argumentos
-caminar.call(person, 600, 'sur');
+caminar.call(person.person2, 600, 'sur');
 
 
 //**********APPLY********/
