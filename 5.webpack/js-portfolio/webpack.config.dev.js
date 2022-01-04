@@ -3,9 +3,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
 const Dotenv = require('dotenv-webpack');
+//Analizar el peso de nuestro bundle
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
-    // mode: 'production', // LE INDICO EL MODO EXPLICITAMENTE
     entry: './src/index.js', // el punto de entrada de mi aplicación
     output: { // Esta es la salida de mi bundle
         path: path.resolve(__dirname, 'dist'),
@@ -17,7 +18,8 @@ module.exports = {
     },
     //En esta parte le indicamos que este es modo desarrollo
     mode: 'development',
-    watch: true,
+    devtool: 'source-map',
+    /* watch: true, */
     resolve: {
         extensions: ['.js'], // LOS ARCHIVOS QUE WEBPACK VA A LEER
         alias: {
@@ -71,6 +73,14 @@ module.exports = {
             }]
         }),
         new Dotenv(),
+        new BundleAnalyzerPlugin(),
     ],
+    devServer: {
+        static: path.join(__dirname, 'dist'),
+        compress: true,
+        historyApiFallback: true,
+        port: 3006,
+        open: true,
+    }
 
 }
